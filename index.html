@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>원자 모형의 진화</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #1e90ff;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      width: 250px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #1e90ff;
+    }
+    .description {
+      display: none;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #eee;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🔬 원자 모형의 변화 과정</h1>
+    <p>화학Ⅰ 개념을 재미있게 배워보자!</p>
+  </header>
+
+  <div class="container">
+    <div class="card" onclick="toggleDescription(0)">
+      <h3>1. 돌턴 모형</h3>
+      <p>→ 구 모양의 단단한 입자</p>
+      <div class="description">
+        1803년, 돌턴은 모든 물질은 더 이상 나눌 수 없는 입자인 원자로 이루어졌다고 주장했어요. 원자는 단단한 공 모양으로 생각했죠.
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleDescription(1)">
+      <h3>2. 톰슨 모형</h3>
+      <p>→ 건포도 빵 모형</p>
+      <div class="description">
+        1897년, 전자를 발견한 톰슨은 원자가 양전하 덩어리 안에 전자가 박혀 있는 모습이라고 생각했어요. 마치 건포도빵처럼요!
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleDescription(2)">
+      <h3>3. 러더퍼드 모형</h3>
+      <p>→ 중심에 핵이 있는 원자</p>
+      <div class="description">
+        1911년, 금박 실험을 통해 중심에 양전하를 띈 핵이 있고, 전자는 주위를 돌고 있다고 제안했어요. 원자의 대부분은 빈 공간!
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleDescription(3)">
+      <h3>4. 보어 모형</h3>
+      <p>→ 전자가 궤도를 도는 모습</p>
+      <div class="description">
+        1913년, 보어는 전자가 일정한 에너지 준위를 따라 핵 주위를 돌며, 에너지 흡수/방출에 따라 궤도가 바뀐다고 했어요.
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleDescription(4)">
+      <h3>5. 현대 모형</h3>
+      <p>→ 전자 구름 모형</p>
+      <div class="description">
+        현재는 전자가 특정 위치가 아닌 ‘확률적인 분포’로 존재한다고 생각해요. 전자 구름처럼 퍼져 있는 모습이죠.
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 원자모형학습 | 과학은 재미있다!
+  </footer>
+
+  <script>
+    function toggleDescription(index) {
+      const descriptions = document.querySelectorAll(".description");
+      descriptions.forEach((desc, i) => {
+        if (i === index) {
+          desc.style.display = desc.style.display === "block" ? "none" : "block";
+        } else {
+          desc.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
